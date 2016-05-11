@@ -34,6 +34,8 @@
 % \usepackage[usenames, dvipsnames]{color}
 \usepackage{wrapfig} % For positioning figure
 
+\usepackage{float}
+
 % For subfigures
 \usepackage{subfigure}
 \usepackage{caption}
@@ -50,7 +52,7 @@
 
 % Vietnamese input
 \usepackage[utf8]{inputenc}
-\usepackage[vietnam,english]{babel}
+\usepackage[vietnamese,english]{babel}
 \selectlanguage{english}
 
 %% Appendix
@@ -88,7 +90,8 @@
 %% ================== ENVIRONMENTS ================== %%
 \newenvironment{requirement}
 {
-	\cleardoublepage
+	\newpage
+	\phantomsection
 	\thispagestyle{empty}
 	\addcontentsline{toc}{chapter}{Requirements for the thesis}
 	\vspace{-30pt}
@@ -103,7 +106,8 @@
 
 \newenvironment{acknowledgement}
 {
-	\cleardoublepage
+	\newpage
+	\phantomsection
 	\thispagestyle{empty}
 	\addcontentsline{toc}{chapter}{Acknowledgements}
 	\vspace{-30pt}
@@ -118,7 +122,8 @@
 
 \newenvironment{abstract}
 {
-	\cleardoublepage
+	\newpage
+	\phantomsection
 	\thispagestyle{empty}
 	\addcontentsline{toc}{chapter}{Abstract of thesis}
 	\vspace{-30pt}
@@ -133,9 +138,10 @@
 
 \newenvironment{vnabstract}
 {
-	\cleardoublepage
+	\newpage
+	\phantomsection
 	\thispagestyle{empty}
-	\selectlanguage{vietnam} %% Must be presented here, or you will not be able
+	\selectlanguage{vietnamese} %% Must be presented here, or you will not be able
 							 %% to use Vietnamese in some pages in your thesis
 	\addcontentsline{toc}{chapter}{Tóm tắt nội dung đồ án tốt nghiệp}
 	\vspace{-30pt}

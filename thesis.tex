@@ -10,10 +10,21 @@
 \include{Fronts/vnabstract}
 \include{Fronts/abstract}
 \include{Fronts/acknowledgement}
+
 \fontsize{13}{16pt}\selectfont
+
+\newpage
+\phantomsection
 \tableofcontents
+\addcontentsline{toc}{chapter}{Table of contents}
+
+\newpage
+\phantomsection
 \listoffigures
 \addcontentsline{toc}{chapter}{List of figures}
+
+\newpage
+\phantomsection
 \listoftables
 \addcontentsline{toc}{chapter}{List of tables}
 
@@ -23,15 +34,14 @@
 \include{Chapters/chapter3}
 \include{Chapters/chapter4}
 \include{Chapters/chapter5}
+\include{Chapters/chapter6}
 
 \begin{appendices} % must be placed before \backmatter to prevent un-numbered appendices
 \include{Appendices/app1}
-\include{Appendices/app2}
-\include{Appendices/app3}
 \end{appendices}
 
 \backmatter
-\bibliographystyle{unsrt}
+\bibliographystyle{IEEEtran}
 \renewcommand{\bibname}{References}
 \bibliography{references}
 \addcontentsline{toc}{chapter}{References}
