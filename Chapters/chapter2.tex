@@ -6,7 +6,7 @@ In this chapter, basic objects in screen such as button, text and keyboard are c
 
 \section{Technique using for detection}
 \subsection{Edge detection}
-\subsubsection{\gls{ced}}
+\subsubsection{\acrfull{ced}}
 The main purpose of edge detection is to obtain structure properties of the image with least data extracted for further image processing \cite{canny}. Among some algorithms existing, I choose the one developed by John F. Canny (JFC) \nocite{jfc_canny}. Known as Canny Edge detector or optimal detector, Canny algorithm has three main advantages \cite{code_canny}:
 	\begin{itemize}
 		\item \textbf{Low error rate}: Meaning a good detection of only existent edges.
@@ -14,7 +14,7 @@ The main purpose of edge detection is to obtain structure properties of the imag
 		\item \textbf{Minimal response}: Only one detector response per edge.
 	\end{itemize}
 
-\subsubsection{CED algorithm steps}
+\subsubsection{\acrshort{ced} algorithm steps}
 \label{sec:ced_step}
 \begin{enumerate}
 	\item \textbf{Noise filter}: Using Gaussian filter \nocite{gauss_filter}, a sample kernel of \textit{size = 5} might be shown as Equation \ref{eq:gauss}:
@@ -67,7 +67,7 @@ The main purpose of edge detection is to obtain structure properties of the imag
 
 \subsection{Shape detection}
 \label{sec:shape_detect}
-The output of CED process in Section \ref{sec:ced_step} is calculated to decide whether image contains simple geometric shapes (such as triangles, rectangles, squares, pentagons) or not.
+The output of \acrshort{ced} process in Section \ref{sec:ced_step} is calculated to decide whether image contains simple geometric shapes (such as triangles, rectangles, squares, pentagons) or not.
 
 For each edge, contour is retrieved for detecting process. Only contours with area greater than certain amount are considered. Practically, contours larger than 250 pixel are accepted.
 
@@ -115,18 +115,18 @@ After applying all these 4 steps, we get a filtered image that contains only tex
 		\label{fig:flow_diagram_morph}
 	\end{figure}
 
-\subsection{Optical Character Recognition}
+\subsection{\acrlong{ocr}}
 \label{sec:ocr}
-By definition, \gls{ocr} is the process or technology of reading data in printed form by a device (optical character reader) that scans and identifies characters \cite{ocr_def}.
+By definition, \acrfull{ocr} is the process or technology of reading data in printed form by a device (optical character reader) that scans and identifies characters \cite{ocr_def}.
 
-Tesseract is an open-source OCR engine having comparative recognition accuracy. Originally developed by HP between 1984 and 1994, Tesseract became open-source in 2005 and is developed by Google since 2006 \cite{ocr_overview}. According to 1995 UNLV results, Tesseract can achieve accuracy up to 98\% on English newspaper \cite{Rice_thefourth}.
+Tesseract is an open-source \acrshort{ocr} engine having comparative recognition accuracy. Originally developed by HP between 1984 and 1994, Tesseract became open-source in 2005 and is developed by Google since 2006 \cite{ocr_overview}. According to 1995 UNLV results, Tesseract can achieve accuracy up to 98\% on English newspaper \cite{Rice_thefourth}.
 
-Figure \ref{fig:tesseract_arch} briefly describes the architecture of Tesseract OCR engine \cite{tesseract_oscon}:
+Figure \ref{fig:tesseract_arch} briefly describes the architecture of Tesseract \acrshort{ocr} engine \cite{tesseract_oscon}:
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{Chapters/Fig/tesseract_arch.png}
-		\caption{Tesseract OCR Architecture}
+		\caption{Tesseract \acrshort{ocr} Architecture}
 		\label{fig:tesseract_arch}
 	\end{figure}
 
@@ -185,7 +185,7 @@ Keyboard consists of rectangle buttons. This feature shares the same detection m
 		\label{fig:kb_detect}
 	\end{figure}
 
-\subsection{Optical Character Recognition}
+\subsection{\acrlong{ocr}}
 Text segments detected in previous section is used for recognizing process. After this stage, object will have a name given from recognized text and a relative location on the screen.
 
 	\begin{figure}[H]
