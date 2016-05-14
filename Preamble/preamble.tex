@@ -27,6 +27,13 @@
 \renewcommand{\footrulewidth}{0.5pt}
 %% ================ End HEADER AND FOOTER ================ %%
 
+% Add 'Chapter ' to table of contents
+\makeatletter
+\renewcommand\chapternumberline[1]{%
+   \@chapapp@head\@cftbsnum \numtoName{#1}\@cftasnum~}
+\renewcommand\cftchaptername{\chaptername~}
+\makeatother
+
 \usepackage{graphicx}
 
 \usepackage{tabularx}
@@ -67,9 +74,11 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 
-% Draw box around important equations
-\usepackage{tcolorbox}
-\definecolor{bordeuxcolor}{RGB}{128, 0, 0}
+%% Algorithmic package
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+
 
 %% User-defined commands
 \input{\PreamblePath/commands}
@@ -79,9 +88,17 @@
 %% ================== CHAPTER ================== %%
 % \selectlanguage{english}
 \usepackage[Bjornstrup]{fncychap}
-% \usepackage[Lenny]{fncychap}
-% \renewcommand{\chaptername}{CHAPTER}
-% \renewcommand{\thechapter}{\Roman{chapter}}
+
+\renewcommand{\DOCH}{%
+  \settowidth{\py}{\CNoV\thechapter}
+%  \addtolength{\py}{-10pt}      % Amount of space by which the
+%                                % number is shifted right
+  \fboxsep=0pt%
+  \colorbox[gray]{.85}{\rule{0pt}{40pt}\parbox[b]{\textwidth}{\hfill}}%
+  \kern-\py\raise20pt%
+  \hbox{\color[gray]{.5}\CNoV\thechapter}\\%
+}
+
 
 %% ================ End CHAPTER ================ %%
 
