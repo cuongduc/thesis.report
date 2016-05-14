@@ -17,6 +17,8 @@ Figure \ref{fig:class_diagram} mentions all system ``workers'' known as classes 
 	\end{figure}
 
 \subsection{Main components of the system}
+System consists of 3 main modules, which are Image Processing module, Script Managing module and Robot Action Handling module. Image Processing module involves in detecting and recognizing screen elements along with managing and organizing them for further access. Script Managing module does the job of operating test cases. Robot Handling module defines the movements of the robot and proposes inducing methods to other components so as to have the robot working.
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Chapters/Fig/main_class.png}
@@ -24,15 +26,10 @@ Figure \ref{fig:class_diagram} mentions all system ``workers'' known as classes 
 		\label{fig:main_class}
 	\end{figure}
 
-\subsection{Script Generator structure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.75]{Chapters/Fig/script_gen.png}
-		\caption{Script Generator structure}
-		\label{fig:script_gen}
-	\end{figure}
+There are also some assisting classes. PhoneTestSystem takes responsibility for wrapping up all modules and provide interface functions to user. LocationTranslator holds user input parameters with the purpose of converting actual phone screen location into pixel location in screen image and vice versa.
 
 \subsection{Image Processor structure}
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Chapters/Fig/img_processor.png}
@@ -40,7 +37,17 @@ Figure \ref{fig:class_diagram} mentions all system ``workers'' known as classes 
 		\label{fig:img_processor}
 	\end{figure}
 
+\subsection{Script Generator structure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.75]{Chapters/Fig/script_gen.png}
+		\caption{Script Generator structure}
+		\label{fig:script_gen}
+	\end{figure}
+
 \subsection{Action Generator structure}
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Chapters/Fig/act_gen.png}
@@ -49,10 +56,10 @@ Figure \ref{fig:class_diagram} mentions all system ``workers'' known as classes 
 	\end{figure}
 
 \section{Robot interface command}
+
 	\begin{itemize}
 		\item[--] GotoXYZ
 		\item[--] MoveToDest
 		\item[--] ClickUp
 		\item[--] ClickDown
 	\end{itemize}
-
