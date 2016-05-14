@@ -29,6 +29,7 @@ System consists of 3 main modules, which are Image Processing module, Script Man
 There are also some assisting classes. PhoneTestSystem takes responsibility for wrapping up all modules and provide interface functions to user. LocationTranslator holds user input parameters with the purpose of converting actual phone screen location into pixel location in screen image and vice versa.
 
 \subsection{Image Processor structure}
+Using image processing technique presented in Chapter \ref{ch:screen_recognize}, screen elements are wrapped into objects which has name and location relatively to the screen reference system.
 
 	\begin{figure}[H]
 		\centering
@@ -36,6 +37,8 @@ There are also some assisting classes. PhoneTestSystem takes responsibility for 
 		\caption{Image Processor structure}
 		\label{fig:img_processor}
 	\end{figure}
+
+An ImageProcessor receive image input from outer classes and parse its content into list of managed objects called ImageObjects. An ImageObject holds target's name which is text read from screen, and location in percent with screen coordinate. The location can be used for converting to real location later via LocationTranslator mentioned above. The name of object is used for searching and verifying element in script through \textit{getObj} and \textit{verifyObj} methods of ImageProcessor.
 
 \subsection{Script Generator structure}
 
