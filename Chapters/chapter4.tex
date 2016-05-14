@@ -1,5 +1,9 @@
 \chapter{System implementation with Robot controller module}
-This chapter describes how all of components mentioned above are assembled. In design, I apply top-down approach in system development process. First, system is broken down into modules in which each system's function is handled separately. Next, functions of modules are presented in groups of communicating interfaces and groups of internal processing methods. Consequently, modules is divided into smaller and more dedicated units. For each module, design pattern is engaged correspondingly to its operation behavior.
+\indent This chapter describes how all of components mentioned above are assembled. In design, I apply top-down approach in system development process. First, system is broken down into modules in which each system's function is handled separately. Next, functions of modules are presented in groups of communicating interfaces and groups of internal processing methods. Consequently, modules is divided into smaller and more dedicated units.
+
+For each module, design pattern is engaged correspondingly to its operation behavior for the sake of ease in maintenance and convenience for extensibility.
+
+Finally, when the system walking through all unit test cases, it is connected with the Delta robot to accomplish desired activities.
 
 \section{System implementation}
 \subsection{Whole system class diagram}
