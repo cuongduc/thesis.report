@@ -1,6 +1,8 @@
 \chapter{System implementation with Robot controller module}
+This chapter describes how all of components mentioned above are assembled. In design, I apply top-down approach in system development process. First, system is broken down into modules in which each system's function is handled separately. Next, functions of modules are presented in groups of communicating interfaces and groups of internal processing methods. Consequently, modules is divided into smaller and more dedicated units. For each module, design pattern is engaged correspondingly to its operation behavior.
+
 \section{System implementation}
-Whole system class diagram
+\subsection{Whole system class diagram}
     \begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Chapters/Fig/class_diagram.png}
@@ -8,7 +10,7 @@ Whole system class diagram
 		\label{fig:class_diagram}
 	\end{figure}
 
-Main components of the system
+\subsection{Main components of the system}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Chapters/Fig/main_class.png}
@@ -16,7 +18,7 @@ Main components of the system
 		\label{fig:main_class}
 	\end{figure}
 
-Script Generator structure
+\subsection{Script Generator structure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Chapters/Fig/script_gen.png}
@@ -24,7 +26,7 @@ Script Generator structure
 		\label{fig:script_gen}
 	\end{figure}
 
-Image Processor structure
+\subsection{Image Processor structure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Chapters/Fig/img_processor.png}
@@ -32,7 +34,7 @@ Image Processor structure
 		\label{fig:img_processor}
 	\end{figure}
 
-Action Generator structure
+\subsection{Action Generator structure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Chapters/Fig/act_gen.png}
