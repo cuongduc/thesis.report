@@ -41,6 +41,7 @@ Using image processing technique presented in Chapter \ref{ch:screen_recognize},
 An ImageProcessor receive image input from outer classes and parse its content into list of managed objects called ImageObjects. An ImageObject holds target's name which is text read from screen, and location in percent with screen coordinate. The location can be used for converting to real location later via LocationTranslator mentioned above. The name of object is used for searching and verifying element in script through \textit{getObj} and \textit{verifyObj} methods of ImageProcessor.
 
 \subsection{Script Generator structure}
+A script is formed of sequence of actions which are introduced in Section \ref{sec:script_comp}. Considering that each action can have different members but shares some required factors, ScriptGenerator is inspired by ``Builder Pattern'' \footnote{Read more at: \url{http://www.oodesign.com/builder-pattern.html}} to allow a dynamic way to generate script action on demand.
 
 	\begin{figure}[H]
 		\centering
@@ -48,6 +49,8 @@ An ImageProcessor receive image input from outer classes and parse its content i
 		\caption{Script Generator structure}
 		\label{fig:script_gen}
 	\end{figure}
+
+
 
 \subsection{Action Generator structure}
 
