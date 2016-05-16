@@ -50,9 +50,10 @@ A script is formed of sequence of actions which are introduced in Section \ref{s
 		\label{fig:script_gen}
 	\end{figure}
 
-
+Corresponding to each attribute of a script action, there is a \textit{set} method. Depending on situation, appropriate method is called. For an example, in Figure \ref{fig:click_test_diag}, a simple action like Clicking on READY button only needs a target and action type (click, in this case). Thus, two methods ``setSrc'' and ``setAction'' are called and finished with ``generateAction'' method to produce an instance of ScriptAction. Another case is Clicking on SUCCESS button. This action require a result to be verified which is READY button. Hence, destination object need to be set by ``setDest'' method before ``generateAction'' being called. By using this kind of pattern, attributes of desired object are built intentionally.
 
 \subsection{Action Generator structure}
+ActionGenerator is in charge of providing an interface for telling the robot what to do. The actions of the robot are represented in 3 basic classes. Figure \ref{fig:act_gen} describes the relation between these classes.
 
 	\begin{figure}[H]
 		\centering
@@ -61,11 +62,15 @@ A script is formed of sequence of actions which are introduced in Section \ref{s
 		\label{fig:act_gen}
 	\end{figure}
 
+Based on ``Command Pattern'' \footnote{Read more at: \url{http://www.oodesign.com/command-pattern.html}}, action request is encapsulated in an object that allows the parameterization with different requests. The client simply calls \textit{execute} method of a RobotAction instance and let it run itself. The execution detail is predefined at action's initialization through ActionGenerator.
+
+The most basic movement is moving the robot's pointer. When this action is executed, the pointer will be move to chosen location. The following actions, such as Touch, Drag, Long Click and Flick, are derived from this action and then compose more complex movements.
+
 \section{Robot interface command}
 
 	\begin{itemize}
 		\item[--] GotoXYZ
-		\item[--] MoveToDest
+		\item[--] GotoTarget
 		\item[--] ClickUp
 		\item[--] ClickDown
 	\end{itemize}
