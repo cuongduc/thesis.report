@@ -125,7 +125,7 @@ Figure \ref{fig:tesseract_arch} briefly describes the architecture of Tesseract 
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.5]{Chapters/Fig/tesseract_arch.png}
+		\includegraphics[scale=0.65]{Chapters/Fig/tesseract_arch.png}
 		\caption{Tesseract \acrshort{ocr} Architecture}
 		\label{fig:tesseract_arch}
 	\end{figure}
@@ -133,6 +133,8 @@ Figure \ref{fig:tesseract_arch} briefly describes the architecture of Tesseract 
 The output results of this phrase are used for naming objects which are identified in later script processing steps that we will discover in the next chapter.
 
 \section{Recognition result}
+Because Image Processing is the core of the script processing system, every feature of the Image Processing module is required to be tested independently to assure the most precise rate as well as the best performance.
+
 This section presents the result of unit testing for each image processing functions of the Image Processor component.
 
 \subsection{Button detection}
@@ -154,36 +156,42 @@ Buttons are detected by their shape using the technique presented in Section \re
 		\label{fig:btn_detect}
 	\end{figure}
 
+Rectangular buttons with high contrast color are detected very fast with high accuracy.
+
 \subsection{Text detection}
 Text is detected and segmented by the algorithm in Section \ref{sec:text_detect}
 
 	\begin{figure}[H]
 	    \centering
 	    \subfigure[Text detection in alarm home screen]{
-	        \includegraphics[scale=0.5]{Chapters/Fig/text_detect_home.png}
+	        \includegraphics[scale=0.65]{Chapters/Fig/text_detect_home.png}
 	    }
 	    \qquad
 	    \subfigure[Text detection in alarm item screen]{
-	        \includegraphics[scale=0.5]{Chapters/Fig/text_detect_item.png}
+	        \includegraphics[scale=0.65]{Chapters/Fig/text_detect_item.png}
 	    }
 	    \qquad
 	    \subfigure[Text detection in alarm time select screen]{
-	        \includegraphics[scale=0.5]{Chapters/Fig/text_detect_clock.png}
+	        \includegraphics[scale=0.65]{Chapters/Fig/text_detect_clock.png}
 	    }
 	    \qquad
 	    \caption{Text detection result}
 		\label{fig:text_detect}
 	\end{figure}
 
+With appropriate morphological operation, necessary text elements are detected and well segmented.
+
 \subsection{Keyboard detection}
 Keyboard consists of rectangular buttons. This feature shares the same detection method with Button detection.
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.5]{Chapters/Fig/kb_detect.png}
+		\includegraphics[scale=0.65]{Chapters/Fig/kb_detect.png}
 		\caption{Keyboard detection result}
 		\label{fig:kb_detect}
 	\end{figure}
+
+
 
 \subsection{\acrlong{ocr}}
 Text segments detected in the previous section are used for recognizing process. After this stage, the object will have a name given from recognized text and a relative location on the screen.
@@ -205,3 +213,5 @@ Text segments detected in the previous section are used for recognizing process.
 	    \caption{Text recognition result}
 		\label{fig:text_recognize}
 	\end{figure}
+
+With high resolution image, 720p standard or above, text is recognized in high accuracy. In contrast, phone with a low resolution screen has some difficulties in \acrshort{ocr} process. In this case, we need a different technique to overcome this shortage.
