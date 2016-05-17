@@ -1,13 +1,13 @@
 \chapter{Mobile phone screen content recognition module}
 \label{ch:screen_recognize}
-Mobile phone screen contains much of elements, but can be classified in two group: text and graphical element.
+Mobile phone screen contains much of elements, but can be classified in two groups: text and graphical element.
 Understanding the meaning of phone screen requires to detect and recognize these elements.
 In this chapter, basic objects in screen such as button, text and keyboard are covered.
 
 \section{Technique using for detection}
 \subsection{Edge detection}
 \subsubsection{\acrfull{ced}}
-The main purpose of edge detection is to obtain structure properties of the image with least data extracted for further image processing \cite{canny}. Among some algorithms existing, I choose the one developed by John F. Canny (JFC) \nocite{jfc_canny}. Known as Canny Edge detector or optimal detector, Canny algorithm has three main advantages \cite{code_canny}:
+The main purpose of edge detection is to obtain structural properties of the image with the least data extracted for further image processing \cite{canny}. Among some algorithms existing, I choose the one developed by John F. Canny (JFC) \nocite{jfc_canny}. Known as Canny Edge detector or optimal detector, Canny algorithm has three main advantages \cite{code_canny}:
 	\begin{itemize}
 		\item \textbf{Low error rate}: Meaning a good detection of only existent edges.
 		\item \textbf{Good localization}: The distance between edge pixels detected and real edge pixels have to be minimized.
@@ -75,7 +75,7 @@ Next, shape of the contour is decided by its attributes. For example, if the con
 
 \subsection{Text detection and extraction}
 \label{sec:text_detect}
-Mobile phone screen is composed of much of text. Almost object in the screen has text with it. Text segmentation and recognition help the system to understanding the sense of the screen content.
+Mobile phone screen is composed of much of the text. Almost object in the screen has text with it. Text segmentation and recognition help the system in understanding the sense of the screen content.
 
 Our system aims at the automatic detection of text. This is done by the algorithm. Figure \ref{fig:flow_diagram_morph} shows the flow diagram of text detection algorithm. The algorithm steps are summarized as follows.
 
@@ -117,7 +117,7 @@ After applying all these 4 steps, we get a filtered image that contains only tex
 
 \subsection{\acrlong{ocr}}
 \label{sec:ocr}
-By definition, \acrfull{ocr} is the process or technology of reading data in printed form by a device (optical character reader) that scans and identifies characters \cite{ocr_def}.
+By definition, \acrfull{ocr} is the process or technology of reading data in printed form from a device (optical character reader) that scans and identifies characters \cite{ocr_def}.
 
 Tesseract is an open-source \acrshort{ocr} engine having comparative recognition accuracy. Originally developed by HP between 1984 and 1994, Tesseract became open-source in 2005 and is developed by Google since 2006 \cite{ocr_overview}. According to 1995 UNLV results, Tesseract can achieve accuracy up to 98\% on English newspaper \cite{Rice_thefourth}.
 
@@ -130,13 +130,13 @@ Figure \ref{fig:tesseract_arch} briefly describes the architecture of Tesseract 
 		\label{fig:tesseract_arch}
 	\end{figure}
 
-The output results of this phrase are used for naming objects which are identified in later script processing steps that we will discover in next chapter.
+The output results of this phrase are used for naming objects which are identified in later script processing steps that we will discover in the next chapter.
 
 \section{Recognition result}
-This section presents the result of unit testing for each image processing function of Image Processor component.
+This section presents the result of unit testing for each image processing functions of the Image Processor component.
 
 \subsection{Button detection}
-Buttons are detected by their shape using technique presented in Section \ref{sec:shape_detect}.
+Buttons are detected by their shape using the technique presented in Section \ref{sec:shape_detect}.
 
 	\begin{figure}[H]
 	    \centering
@@ -155,7 +155,7 @@ Buttons are detected by their shape using technique presented in Section \ref{se
 	\end{figure}
 
 \subsection{Text detection}
-Text is detected and segmented by algorithm in Section \ref{sec:text_detect}
+Text is detected and segmented by the algorithm in Section \ref{sec:text_detect}
 
 	\begin{figure}[H]
 	    \centering
@@ -176,7 +176,7 @@ Text is detected and segmented by algorithm in Section \ref{sec:text_detect}
 	\end{figure}
 
 \subsection{Keyboard detection}
-Keyboard consists of rectangle buttons. This feature shares the same detection method with Button detection.
+Keyboard consists of rectangular buttons. This feature shares the same detection method with Button detection.
 
 	\begin{figure}[H]
 		\centering
@@ -186,7 +186,7 @@ Keyboard consists of rectangle buttons. This feature shares the same detection m
 	\end{figure}
 
 \subsection{\acrlong{ocr}}
-Text segments detected in previous section is used for recognizing process. After this stage, object will have a name given from recognized text and a relative location on the screen.
+Text segments detected in the previous section are used for recognizing process. After this stage, the object will have a name given from recognized text and a relative location on the screen.
 
 	\begin{figure}[H]
 	    \centering
