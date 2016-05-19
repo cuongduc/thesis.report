@@ -26,7 +26,7 @@ Although there are many complicated actions people can make, these actions can b
 	\end{itemize}
 
 \subsection{States of system}
-The states of the system is briefly described in Figure \ref{fig:system_state}.
+The states of the system is illustrated in Figure \ref{fig:system_state}.
 
     \begin{figure}[H]
 		\centering
@@ -35,15 +35,22 @@ The states of the system is briefly described in Figure \ref{fig:system_state}.
 		\label{fig:system_state}
 	\end{figure}
 
-//need to check
 While in operation, the system tends to find the target object for calling the action. If the Image Processor returns no such object, the test case fails.
-Action is applied on found target object.
-After finishing, result on the screen continues to be used for next action in sequence.
-The process is repeated until no more action. After this stage, result of test case is ``success''. If there is any failure during testing process, the test case will be interrupted and produce failing message.
 
+Once the target is found, appropriate action is applied to as in the script. After finishing, the result on the screen continues to be used for next action in sequence.
+
+The process is repeated until no more action in the script. After this stage, the result of the test case is ``success''. If there is any failure during testing process, the test case will be interrupted and produce failing message.
 
 \subsection{System sequence diagram}
-From System state diagram, a Sequence diagram with specific actors is created.
+From System state diagram, a Sequence diagram with specific actors is derived. Figure \ref{fig:sequence_diagram} shows a compact sequence of a testing process.
+
+To begin a test, the user needs to set up parameters of the testing device. These parameters are necessary for converting pixel location on the display to the real location on the phone screen.
+
+Afterward, Script Actions are generated. The director of the system, Phone Test System, receives the list of Script Actions, and repeatedly check if corresponding Image Object exists in the content of the screen via Image Processor's operations. If the required object is not found, the sequence stops with ``fail'' result. Otherwise, the script continues with creating Robot Action which is determined in Script Action. Phone Test System then calls \textit{execute} method of Robot Action to have the robot running.
+
+After execution finishes, if an expected object is specified in the action script, Image Processor reads the screen again and verifies whether that object exists or not.
+
+This process is replicated along the actions in the script. Whenever there is an missing object, the test fails. If walking through all actions in the test script, the final result is display on the application user interface.
 
     \begin{figure}[H]
 		\centering
@@ -51,8 +58,6 @@ From System state diagram, a Sequence diagram with specific actors is created.
 		\caption{System sequence diagram}
 		\label{fig:sequence_diagram}
 	\end{figure}
-
-As we can see in diagram in Figure \ref{fig:sequence_diagram}, to begin a test, user needs to set up parameters of tested device. Afterward, Script Actions are generated. The director of the system, Phone Test System class, receives the list of Script Actions, and repeatedly check if corresponding Image Object exists in the content of the screen. If object is not found, the sequence stops with ``fail'' result. Otherwise, the script continues with creating Robot Action which is determined in Script Action. Phone Test System then calls \textit{execute} method of Robot Action to let the robot move.
 
 \section{Testing script example}
 \label{sec:eg_script}
