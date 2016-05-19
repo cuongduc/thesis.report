@@ -5,18 +5,18 @@ This chapter describes the components that make up a testing script. At the end 
 
 \section{Testing script structure}
 \label{sec:script_comp}
-A testing script consists of one or more script actions. Each script action has the following elements:
+A testing script consists of one or more script actions. By running the sequence of actions, the goal of the test can be achieved by asserting the result obtained during or end of the test case. Each script action has the following elements:
     \begin{itemize}
-		\item[--] \textbf{Source object}: element on the screen to be applied action on which is detected in Chapter \ref{ch:screen_recognize}
+		\item[--] \textbf{Source object}: element on the screen to be applied action on which is detected in Chapter \ref{ch:screen_recognize}.
 		\item[--] \textbf{Action}: what to do with source object, will be covered in Section \ref{sec:actions}.
-		\item[--] \textbf{Execution time}: how long it takes to complete the action
-		\item[--] \textbf{Expected object} (optional, depended on each action): after finishing action, what expected to be display on the screen
+		\item[--] \textbf{Execution time}: how long it takes to complete the action. This parameter is used for delaying the screen reading process while the robot is running.
+		\item[--] \textbf{Expected object} (optional, depended on each action): after finishing action, what expected to be display on the screen. This is the goal of the verification step.
 	\end{itemize}
 
 \subsection{Actions}
 \label{sec:actions}
 The robot is designed for physically contacting with the phone. It simulates human operations to perform testing process.
-There are 4 basic actions for robot to apply on mobile phone screen:
+Although there are many complicated actions people can make, these actions can be classified into 4 basic actions that the robot can apply on mobile phone screen:
 
     \begin{itemize}
 		\item[--] \textbf{Click}: perform a quick single tap on screen
