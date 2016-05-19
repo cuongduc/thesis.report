@@ -43,6 +43,43 @@ Beside running this application, we are required to have the following software 
 	\begin{itemize}
 		\item[--] \textbf{Android platform tool}: command line tools for communicate with Android device.
 		\item[--] \textbf{Droid@Screen}: application letting us capture Android screen to PC.
+		\item[--] \textbf{Simple Click Test}: self-created tested application for Experiment 1.
+		\item[--] \textbf{Clock ICS}: tested application for Experiment 2. This application can be downloaded on Google Play Store \footnote{Available at: \url{https://play.google.com/store/apps/details?id=com.moblynx.clockics}}
+	\end{itemize}
+
+\subsection{Experimental procedure}
+First, set phone to initial position
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Chapters/Fig/phone_setup.jpg}
+		\caption{Setup phone position}
+		\label{fig:phone_setup}
+	\end{figure}
+
+Then open Screen Capture application. See Appendix \ref{ch:img_capture} for more detail.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Chapters/Fig/droidscreen.png}
+		\caption{Capture phone screen}
+		\label{fig:droidscreen}
+	\end{figure}
+
+Finally, set parameters up
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Chapters/Fig/prog_setup.png}
+		\caption{Parameter setup}
+		\label{fig:prog_setup}
+	\end{figure}
+
+	\begin{itemize}
+		\item[--] Connect to the robot by choosing COM port and press connect.
+		\item[--] Configure phone size
+		\item[--] Choose screen watching method
+		\item[--] Select test suite and run the test
 	\end{itemize}
 
 \section{Experiments and Evaluations}
@@ -50,18 +87,50 @@ This section gives the details of all experiments that we have conducted to veri
 
 \subsection{Experiment 1: Test robot accuracy}
 \subsubsection{Experimental purpose}
+By letting the Delta robot move around the phone screen, we can test the working accuracy of the robot under certain repeated action.
 
 \subsubsection{Experimental setup}
+Open Click test application
 
 \subsubsection{Experimental results}
-[Some pictures here]
+Begin test
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Chapters/Fig/click_start.png}
+		\caption{begin click test}
+		\label{fig:click_start}
+	\end{figure}
+
+Final result
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Chapters/Fig/click_final.png}
+		\caption{final click test}
+		\label{fig:click_final}
+	\end{figure}
 
 \subsection{Experiment 2: Set alarm}
 \subsubsection{Experimental purpose}
 
 \subsubsection{Experimental setup}
+Open Clock ICS application. Then open set alarm item.
 
 \subsubsection{Experimental results}
+Begin test
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Chapters/Fig/alarm_start.png}
+		\caption{begin alarm test}
+		\label{fig:alarm_start}
+	\end{figure}
+
+Final result
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Chapters/Fig/alarm_final.png}
+		\caption{final alarm test}
+		\label{fig:alarm_final}
+	\end{figure}
 
 \section{Analysis and evaluation}
 \subsection{Results analysis}
