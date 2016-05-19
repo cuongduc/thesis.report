@@ -50,7 +50,7 @@ Afterward, Script Actions are generated. The director of the system, Phone Test 
 
 After execution finishes, if an expected object is specified in the action script, Image Processor reads the screen again and verifies whether that object exists or not.
 
-This process is replicated along the actions in the script. Whenever there is an missing object, the test fails. If walking through all actions in the test script, the final result is display on the application user interface.
+This process is replicated along the actions in the script. Whenever there is a missing object, the test fails. If walking through all actions in the test script, the final result is displayed on the application user interface.
 
     \begin{figure}[H]
 		\centering
@@ -64,7 +64,8 @@ This process is replicated along the actions in the script. Whenever there is an
 This section illustrates some test cases and describes the schema in detail. The schema is then used for making test script by system's components described in Chapter \ref{ch:implement}.
 
 \subsection{Simple click test}
-This is the most simple test case. The schema is described in following flow diagram.
+This is the simplest test case. The schema is described in following flow diagram.
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.55]{Chapters/Fig/click_test_diag.png}
@@ -72,11 +73,11 @@ This is the most simple test case. The schema is described in following flow dia
 		\label{fig:click_test_diag}
 	\end{figure}
 
-In this test case, the robot will search for a simple button named READY and the perform a click on it. After that, a SUCCESS button appears in different position on the screen. The robot will move to that button's location to click on it. When this sequence finishes, the screen will display the READY button again.
-This test case is useful for testing the movement of the robot.
+In this test case, the robot will search for a simple button named READY to perform a click on it. After that, a SUCCESS button appears in a different position on the screen. The robot will move to that button's location to click on it. When this sequence finishes, the screen will display the READY button again.
+This test case is useful for testing the movement of the robot and can be run repeatedly endlessly.
 
 \subsection{Set alarm test}
-This is more complicated test case. In this schema, the robot will perform an alarm setting scenario where it will change the current alarm at 8:30 AM to 11:30 AM. Flow diagram of script is presented below:
+This is a more complicated test case. In this schema, the robot will perform an alarm setting scenario where it will change the current alarm at 8:30 AM to 11:30 AM. The flow diagram of the script is presented below:
 
 	\begin{figure}[H]
 		\centering
@@ -85,4 +86,8 @@ This is more complicated test case. In this schema, the robot will perform an al
 		\label{fig:alarm_test_diag}
 	\end{figure}
 
-To walk though this test case, the system has to find an item labeled ``8:30 AM'' to click on. After that, a new screen is displayed with the new target named ``Time''. By clicking on Time item, a time selecting dialog is popped up. The robot has to drag ``8'' item up to make the hour be ``11''. Then, to finish setting alarm, OK and DONE buttons is pressed sequentially. If the final screen display correct ``11:30 AM'' alarm item, the test case is supposed to be passed.
+To walk though this test case, the system has to find an item labeled ``8:30 AM'' to click on. After that, a new screen is displayed with the new target named ``Time''. By clicking on the Time item, a time selecting dialog pops up. The robot has to drag ``8'' item up to make the hour be ``11''. Then, to finish setting alarm, OK and DONE buttons are pressed sequentially. If the final screen displays correct ``11:30 AM'' alarm item, the test case is supposed to be passed.
+
+The highlight here is that the Delta robot has to carry out the dragging task precisely so that the scroll box show up correct ``11'' number instead of 10 or something else.
+
+In the next chapter, we will discover how all of these scripts are implemented into the application.
