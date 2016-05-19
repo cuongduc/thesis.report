@@ -87,25 +87,37 @@ This section gives the details of all experiments that we have conducted to veri
 
 \subsection{Experiment 1: Test robot accuracy}
 \subsubsection{Experimental purpose}
-By letting the Delta robot move around the phone screen, we can test the working accuracy of the robot under certain repeated action.
+By letting the Delta robot move around the phone screen, we can test the working accuracy of the robot under certain repeated actions.
 
 \subsubsection{Experimental setup}
-Open Click test application
+	\begin{itemize}
+		\item[--]Open Click test application on the phone. Let the application be at initial page.
+		\item[--]Follow the experimental procedure mentioned in previous section.
+	\end{itemize}
 
 \subsubsection{Experimental results}
-Begin test
+Begin test screen, the robot need to click on READY button.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{Chapters/Fig/click_start.png}
-		\caption{begin click test}
+		\caption{Begin click test screen}
 		\label{fig:click_start}
 	\end{figure}
 
-Final result
+After clicking on READY, SUCCESS button appears. The robot is commanded to click on it.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Chapters/Fig/click_mid.png}
+		\caption{After clicking READY screen}
+		\label{fig:click_mid}
+	\end{figure}
+
+Final result when READY is clicked. The test is passed.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{Chapters/Fig/click_final.png}
-		\caption{final click test}
+		\caption{Final click test screen}
 		\label{fig:click_final}
 	\end{figure}
 
