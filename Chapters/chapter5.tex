@@ -27,27 +27,28 @@ All test suites are conducted with the hardware configurations as shown in table
 			  & Android 4.2.2\\
 		\midrule 
 		Robot & Self-construct Delta Robot \\
-			  & \begin{minipage}{0.5\linewidth}
+			  & \begin{minipage}{0.7\linewidth}
 			\includegraphics[width=0.8\linewidth]{Chapters/Fig/delta_robot.jpg}
 		\end{minipage} \\
 		\midrule 
-		Computer & Windows PC \\
+		Computer & Windows computer \\
+				 & Having 2 USB ports for connecting the phone and the robot. \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
 
 \subsection{Supporting software}
-Beside running this application, we are required to have the following software installed on the computer.
+The application can not operate lonely. It requires some supporting software on the computer and applications to be tested installed on target phones.
 
 	\begin{itemize}
 		\item[--] \textbf{Android platform tool}: command line tools for communicate with Android device.
 		\item[--] \textbf{Droid@Screen}: application letting us capture Android screen to PC.
-		\item[--] \textbf{Simple Click Test}: self-created tested application for Experiment 1.
-		\item[--] \textbf{Clock ICS}: tested application for Experiment 2. This application can be downloaded on Google Play Store \footnote{Available at: \url{https://play.google.com/store/apps/details?id=com.moblynx.clockics}}
+		\item[--] \textbf{Simple Click Test} \footnote{Source code available at: \url{https://github.com/alfrededison/simple-click-test}}: self-created tested application for Experiment 1.
+		\item[--] \textbf{Clock ICS} \footnote{Download available at Google Play Store: \url{https://play.google.com/store/apps/details?id=com.moblynx.clockics}}: tested application for Experiment 2.
 	\end{itemize}
 
 \subsection{Experimental procedure}
-First, set phone to initial position
+First, set the phone to the calibrated position of the robot's pointer.
 
 	\begin{figure}[H]
 		\centering
@@ -56,7 +57,7 @@ First, set phone to initial position
 		\label{fig:phone_setup}
 	\end{figure}
 
-Then open Screen Capture application. See Appendix \ref{ch:img_capture} for more detail.
+Then open Droid@Screen application to capture phone screen. See Appendix \ref{ch:img_capture} for capturing process's detail.
 
 	\begin{figure}[H]
 		\centering
@@ -65,7 +66,7 @@ Then open Screen Capture application. See Appendix \ref{ch:img_capture} for more
 		\label{fig:droidscreen}
 	\end{figure}
 
-Finally, set parameters up
+Finally, open the program and set up the parameters
 
 	\begin{figure}[H]
 		\centering
@@ -75,7 +76,7 @@ Finally, set parameters up
 	\end{figure}
 
 	\begin{itemize}
-		\item[--] Connect to the robot by choosing COM port and press connect.
+		\item[--] Connect to the robot by choosing COM port and press Connect.
 		\item[--] Configure phone size
 		\item[--] Choose screen watching method
 		\item[--] Select test suite and run the test
