@@ -155,25 +155,30 @@ After proceeding some operations, the final screen of the application is shown b
 \section{Analysis and evaluation}
 By conducting all the tests over and over, we attain an overview about the usability, durability, precision and performance of the system.
 
-\subsection{Results statistics}
-\begin{table}[H]
-	\centering
-	\caption{Test results statistic}	
-	\label{tab:result_stat}
-	\begin{tabular}{|l|rrr|}
-		\hline
-		Test case & Successful & Failed & Number of tests \\
-		\hline
-		Simple Click & 10 & 0 & 10 \\
-		Set Alarm & 5 & 5 & 10 \\
-		\hline
-		Total & 15 & 5 & 20 \\
-		\hline
-		\textbf{Rate} & \textbf{0.75} & \textbf{0.25} & \textbf{1.00} \\
-		\hline
-	\end{tabular}
-\end{table}
+\subsection{Results statistics and analysis}
+All the test results are recorded in Table \ref{tab:result_stat}. In general, the system produces a high production rate.
 
+	\begin{table}[H]
+		\centering
+		\caption{Test results statistic}	
+		\label{tab:result_stat}
+		\begin{tabular}{|l|rrr|}
+			\hline
+			Test case & Successful & Failed & Number of tests \\
+			\hline
+			Simple Click & 10 & 0 & 10 \\
+			Set Alarm & 5 & 5 & 10 \\
+			\hline
+			Total & 15 & 5 & 20 \\
+			\hline
+			\textbf{Rate} & \textbf{0.75} & \textbf{0.25} & \textbf{1.00} \\
+			\hline
+		\end{tabular}
+	\end{table}
 
-\subsection{Conclusion:}
+For simple application such as Simple Click, the system reaches absolute preciseness thus not any problem is made.
+
+Alarm Test, however, is more complicated and requires much more conditions. With high definition display, Zenfone 5 gives us completely successful results. In contrast, XPeria L has lower resolution screen that makes some obstacles in \acrshort{ocr}. Therefore, a bad result is returned.
+
+\subsection{Conclusion}
 Conclusion here
