@@ -26,7 +26,7 @@ All test suites are conducted with the hardware configurations as shown in table
 			  & Screen 4.3'' 5.40 cm x 9.60 cm \\
 			  & Android 4.2.2\\
 		\midrule 
-		Robot & Self-construct Delta Robot \\
+		Robot & Self-construct Delta Robot with stylus \\
 			  & \begin{minipage}{0.7\linewidth}
 			\includegraphics[width=0.8\linewidth]{Chapters/Fig/delta_robot.jpg}
 		\end{minipage} \\
@@ -113,7 +113,7 @@ After clicking on READY, SUCCESS button appears. The robot is commanded to click
 		\label{fig:click_mid}
 	\end{figure}
 
-Final result when READY is clicked. The test is passed.
+Final result when READY is clicked. The test is Passed.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{Chapters/Fig/click_final.png}
@@ -123,12 +123,19 @@ Final result when READY is clicked. The test is passed.
 
 \subsection{Experiment 2: Set alarm}
 \subsubsection{Experimental purpose}
+This experiment is conducted to verify the smooth in movement of the robot while dragging an item on the phone screen as well as the precision in clicking items.
+
+In addition, this test can be considered as a real test case for a alarm application on Android phone that the tester have to conduct before releasing the application to the market.
 
 \subsubsection{Experimental setup}
-Open Clock ICS application. Then open set alarm item.
+	\begin{itemize}
+		\item[--]Open Clock ICS application on the phone. Switch to Alarms screen of the application.
+		\item[--]Follow the experimental procedure in previous section.
+	\end{itemize}
 
 \subsubsection{Experimental results}
-Begin test
+Before running the test, initial alarms are 8:30 AM and 9:00 AM. The goal of the test is to change 8:30 AM to 11:30 AM.
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{Chapters/Fig/alarm_start.png}
@@ -136,7 +143,8 @@ Begin test
 		\label{fig:alarm_start}
 	\end{figure}
 
-Final result
+After proceeding some operations, the final screen of the application is shown below. 11:30 AM shows up and the test is successfully passed.
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{Chapters/Fig/alarm_final.png}
