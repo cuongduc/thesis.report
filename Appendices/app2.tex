@@ -1,0 +1,48 @@
+\chapter{Set up Droid@Screen}
+\label{ch:droid_setup}
+\section{Environmental setup \cite{droid_setup}}
+\subsection{Install Java}
+Droid@Screen is a Java program, so you need to have Java installed. Get the Java installer from Oracle and go for Java version 7 or later.
+
+\subsection{Install and configure Android SDK}
+Download and install the Android SDK. You can choose the one with or without IDE depending on your need for building Android application or not.
+\newline
+After successful installation, open SDK Manager and install Android SDK platform-tools
+    
+    \begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.65]{Chapters/Fig/sdk_mng.png}
+		\caption{Select SDK platform-tools}
+		\label{fig:sdk_mng}
+	\end{figure}
+
+\subsection{Configure your Android device}
+Enable USB debugging on your device. Then plug in the USB cable between your device and PC.
+    
+    \begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.65]{Chapters/Fig/usb-db.png}
+		\caption{Enable USB debugging}
+		\label{fig:usb-db}
+	\end{figure}
+	
+Install the USB drivers for your phone/tablet. You can obtain appropriate driver from device's vendor or via Windows update (Windows 8 or above).
+
+\subsection{Download and install the latest version of Droid@Screen}
+Go to the download page to get Droid@Screen for your computer at \url{http://droid-at-screen.org/download.html}.
+If you prefer the second approach in Appendix \ref{ch:img_capture}, my modified version is available here \url{link}
+
+\subsection{Launch Droid@Screen}
+On Windows, if you install Java properly, just double click on downloaded file.
+\newline
+For the first time, it will prompt you for the path of ADB. Just navigate to the installation directory of the Android SDK and then into platform-tools/. You should there see the adb.exe file (on Windows).
+
+    \begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.65]{Chapters/Fig/adb.png}
+		\caption{ADB location}
+		\label{fig:adb}
+	\end{figure}
+    
+\section{Capture screen to image}
+If you choose first approach, which is screen capture, you should simply region the displayed mobile screen. 
