@@ -7,7 +7,11 @@ The problem of present testing method is that only software aspect is considered
 We propose a new approach that in its design, software and hardware testing are more integrated. Applying image processing technologies, our system can detect the content of phone screens and produce actions on them. These actions are performed directly on target phone by Delta robot. Robotics testing gives us a less invasive way of mobile testing that does not require special software on the target phone. In addition, the testing series can be applied to any mobile phone operating systems without a doubt.
 
 \section{System overview}
-The system overview and design are described below in Figure \ref{fig:sys_overview}. Our system contains two parts: hardware and software. Hardware part includes Delta robot with its controllers. This part which is designed and manufactured by my partner, Nguyen Tien \textit{Huong}, takes responsibility for contacting with the mobile phone, as human doing. The software framework receives the phone's screen and analyzes data for deciding what action to be executed by the Delta robot. These two parts are connected by a controller module which provides command interface for the software program to communicate with the hardware layer.
+The system overview and design are described below in Figure \ref{fig:sys_overview}.
+Our system contains two parts: hardware and software.
+Hardware part includes Delta robot with its controllers. This part which is designed and manufactured by my partner, Nguyen Tien \textit{Huong}, takes responsibility for contacting with the mobile phone, as a human doing.
+The software framework receives the phone's screen and analyzes data for deciding what action to be executed by the Delta robot.
+These two parts are connected by a controller module which provides a command interface for the software program to communicate with the hardware layer.
 
 In this thesis, I construct testing software framework with screen reading modules and testing script manager. In experiments, I let the robot perform several tests on our phones with some mobile applications.
 
@@ -24,22 +28,22 @@ In order to achieve desired testing framework, the mission is to complete follow
 		\item[--] Software applications
         	\begin{itemize}
 				\item[+] To detect and recognize mobile phone screen's components (button, selection box, text, keyboard).
-                \item[+] To generate testing scripts compactly and conviently.
+				\item[+] To generate test scripts compactly and conveniently.
 			\end{itemize}
 		\item[--] Hardware demands
         	\begin{itemize}
-				\item[+] To perform testing process on the robot with gestures: tap, tap and hold, swipe, ...on the phone.
-                \item[+] Every action must be executed precisely on the target postion.
+				\item[+] To perform a testing process on the robot with gestures: tap, tap and hold, swipe,... on the phone.
+				\item[+] Every action must be executed precisely in the target position.
 			\end{itemize}
 	\end{itemize}
 
 \section{Outline of thesis}
-In the first three chapters, I will be dealing with technologies and tools supporting testing process which include theoretical background and implementation in the project. The next chapter describe practical experiments with the system and our evaluation of the results. The last chapter brings our conclusion on what we have done and our vision of the future researches.
+In the first three chapters, I will be dealing with technologies and tools supporting testing process which include theoretical background and implementation in the project. The next chapter describes practical experiments with the system and our evaluation of the results. The last chapter brings our conclusion on what we have done and our vision of the future researches.
 
-The first component to be covered is mobile phone screen content recoginition module. The following chapter describes the image processing algorithms used for understanding the meaning of the screen. 
+The first component to be covered is mobile phone screen content recognition module. The following chapter describes the image processing algorithms used for understanding the meaning of the screen. 
 
-When the system is aware of the contents of the screen, it calls the second component, testing script manager, for generating actions with these contents. Chapter \ref{ch:test_script} will clarify the testing script's structure and give some specific examples that we use for our experiments.
+When the system is aware of the contents of the screen, it calls the second component, test script manager, for generating actions with these contents. Chapter \ref{ch:test_script} will clarify the testing script's structure and give some specific examples that we use for our experiments.
 
-Finally, every single components are combine in a unified program. The implementaion of this program is stated in Chapter \ref{ch:implement}.
+Finally, every single component are combined in a unified program. The implementation of this program is stated in Chapter \ref{ch:implement}.
 
 In general, the whole thesis aims mainly to establish a testing framework on mobile phone using robotic technology. \nocite{radim_thesis}
