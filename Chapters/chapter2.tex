@@ -5,6 +5,8 @@ Understanding the meaning of phone screen requires to detect and recognize these
 In this chapter, basic objects in screen such as button, text and keyboard are covered.
 
 \section{Technique using for detection}
+The key technique of parsing image contents is to detach the meaning components from background. In this thesis, we utilize some common but powerful methods for image's content detection. These methods are edge detection, shape detection, text detection and character recognition.
+
 \subsection{Edge detection}
 \subsubsection{\acrfull{ced}}
 The main purpose of edge detection is to obtain structural properties of the image with the least data extracted for further image processing \cite{canny}. Among some algorithms existing, I choose the one developed by John F. Canny (JFC) \nocite{jfc_canny}. Known as Canny Edge detector or optimal detector, Canny algorithm has three main advantages \cite{code_canny}:
