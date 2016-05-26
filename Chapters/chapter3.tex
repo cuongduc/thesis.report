@@ -89,6 +89,21 @@ This is a more complicated test case. In this schema, the robot will perform an 
 
 To walk though this test case, the system has to find an item labeled ``8:30 AM'' to click on. After that, a new screen is displayed with the new target named ``Time''. By clicking on the Time item, a time selecting dialog pops up. The robot has to drag ``8'' item up to make the hour be ``11''. Then, to finish setting alarm, OK and DONE buttons are pressed sequentially. If the final screen displays correct ``11:30 AM'' alarm item, the test case is supposed to be passed.
 
-The highlight here is that the Delta robot has to carry out the dragging task precisely so that the scroll box show up correct ``11'' number instead of 10 or something else.
+The highlight here is that the Delta robot has to carry out the dragging task correctly so that the scroll box show up correct ``11'' number instead of 10 or something else.
+
+\subsection{Keyboard typing test}
+This test case requires the most accuracy of the robot. In this schema, the robot will perform an alarm labeling scenario where it will set the label of alarm to a meaning sentence, such as ``i love dce''. The flow diagram of the script is presented Figure \ref{fig:kb_test_diag}.
+
+Like Set Alarm test case, the system has to find an item labeled ``8:30 AM'' to click on. After that, instead of clicking on ``Time'' item, the target is ``Label'' item. When Label item is clicked, a keyboard pops up. The robot has to type the sequence of key. Then, to finish labeling alarm, DONE button is pressed. If the final screen displays correct ``i love dce'' label on alarm item, the test case is supposed to be passed.
+
+The strong concern is that the Delta robot has to carry out the typing task precisely so that it will not click on wrong key.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{Chapters/Fig/kb_test_diag.png}
+		\caption{Keyboard Typing Test flow diagram}
+		\label{fig:kb_test_diag}
+	\end{figure}
 
 In the next chapter, we will discover how all of these scripts are implemented into the application.
+
