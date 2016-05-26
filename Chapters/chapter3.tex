@@ -14,6 +14,8 @@ A testing script consists of one or more script actions. By running the sequence
 		\item[--] \textbf{Expected object} (optional, depended on each action): after finishing action, what expected to be display on the screen. This is the goal of the verification step.
 	\end{itemize}
 
+In the current version of the program, test scripts are written in the program's code. In the next release, test script will be detached to separate file and the program will read from external storage.
+
 \subsection{Actions}
 \label{sec:actions}
 The robot is designed for physically contacting with the phone. It simulates human operations to perform testing process.
@@ -95,6 +97,8 @@ The highlight here is that the Delta robot has to carry out the dragging task co
 This test case requires the most accuracy of the robot. In this schema, the robot will perform an alarm labeling scenario where it will set the label of alarm to a meaning sentence, such as ``i love DCE''. The flow diagram of the script is presented Figure \ref{fig:kb_test_diag}.
 
 Like Set Alarm test case, the system has to find an item labeled ``8:30 AM'' to click on. After that, instead of clicking on ``Time'' item, the target is ``Label'' item. When Label item is clicked, a keyboard pops up. The robot has to type the sequence of key. Then, to finish labeling alarm, DONE button is pressed. If the final screen displays correct ``i love DCE'' label on alarm item, the test case is supposed to be passed.
+
+Because the keyboard layout is fixed and predictable, the items on the keyboard are managed by recognizing an element, such as ``w'', then deriving to other elements with relative location.
 
 The strong concern is that the Delta robot has to carry out the typing task precisely so that it will not click on wrong key.
 
