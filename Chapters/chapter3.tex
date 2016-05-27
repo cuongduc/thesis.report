@@ -1,12 +1,12 @@
-\chapter{Testing script}
+\chapter{Test script}
 \label{ch:test_script}
-Testing script is one of the core of testing framework.
-A testing script can be called a test case.
-This chapter describes the components that make up a testing script. At the end of chapter, there are some examples of testing scripts I use for experiments in Chapter \ref{ch:experiments}.
+Test script is one of the core of testing framework.
+A test script can be called a test case.
+This chapter describes the components that make up a test script. At the end of chapter, there are some examples of test scripts I use for experiments in Chapter \ref{ch:experiments}.
 
-\section{Testing script structure}
+\section{Test script structure}
 \label{sec:script_comp}
-A testing script consists of one or more script actions. By running the sequence of actions, the goal of the test can be achieved by asserting the result obtained during or end of the test case. Each script action has the following elements:
+A test script consists of one or more script actions. By running the sequence of actions, the goal of the test can be achieved by asserting the result obtained during or end of the test case. Each script action has the following elements:
     \begin{itemize}
 		\item[--] \textbf{Source object}: element on the screen to be applied action on which is detected in Chapter \ref{ch:screen_recognize}.
 		\item[--] \textbf{Action}: what to do with source object, will be covered in Section \ref{sec:actions}.
@@ -62,7 +62,7 @@ This process is replicated along the actions in the script. Whenever there is a 
 		\label{fig:sequence_diagram}
 	\end{figure}
 
-\section{Testing script example}
+\section{Test script example}
 \label{sec:eg_script}
 This section illustrates some test cases and describes the schema in detail. The schema is then used for making test script by system's components described in Chapter \ref{ch:implement}.
 
